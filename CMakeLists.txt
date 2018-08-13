@@ -40,7 +40,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(balance)
 
 set(SRC_LIST
-    src/balance.hpp
+    inc/balance.hpp
     src/balance.cpp
 )
 
