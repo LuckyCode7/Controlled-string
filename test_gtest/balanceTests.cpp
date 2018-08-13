@@ -13,7 +13,7 @@ TEST(balance, correct)
 
 TEST(balance, incorrect)
 {
-    EXPECT_EQ(balance(""), 1);
+    EXPECT_EQ(balance(""), 0);
     EXPECT_EQ(balance("("), 0);
     EXPECT_EQ(balance(")"), 0);
     EXPECT_EQ(balance("()["), 0);
