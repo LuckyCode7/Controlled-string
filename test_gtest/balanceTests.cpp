@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/balance.hpp"
+#include "../inc/balance.hpp"
 
 TEST(balance, correct)
 {
