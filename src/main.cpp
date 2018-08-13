@@ -1,5 +1,5 @@
 #include <iostream>
-#include "balance.hpp"
+#include "../inc/balance.hpp"
 
 int main()
 {
