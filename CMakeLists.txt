@@ -40,8 +40,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(CombinedNumber)
 
 set(SRC_LIST
-    src/CombinedNumber.hpp
-    src/CombinedNumber.cpp
+    src/balance.hpp
+    src/balance.cpp
 )
 
 include_directories(src)
