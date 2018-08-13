@@ -37,7 +37,7 @@ endif()
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(CombinedNumber)
+project(balance)
 
 set(SRC_LIST
     src/balance.hpp
@@ -55,8 +55,8 @@ else (UNIX)
 endif (UNIX)
 
 set(TEST_SRC_LIST
-    test/CombinedNumberTests.cpp
     test/test_main.cpp
+    test/balanceTests.cpp
 )
 
 link_libraries(gtest)
