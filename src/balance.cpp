@@ -1,4 +1,4 @@
-#include "balance.hpp"
+#include "../inc/balance.hpp"
 #include <vector>
 
 bool balance(const std::string& str)
