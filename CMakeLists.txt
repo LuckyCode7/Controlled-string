@@ -55,8 +55,8 @@ else (UNIX)
 endif (UNIX)
 
 set(TEST_SRC_LIST
-    test/balanceTests.cpp
     test/test_main.cpp
+    test/balanceTests.cpp
 )
 
 link_libraries(gtest)
