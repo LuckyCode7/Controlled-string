@@ -3,5 +3,5 @@
 
 TEST(balance, check)
 {
-    EXPECT_EQ(isBalanced("()", 1);
+    EXPECT_EQ(balance("()"), 1);
 }
