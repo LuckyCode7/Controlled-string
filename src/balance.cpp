@@ -1,28 +1,42 @@
 #include "balance.hpp"
+#include <vector>
 
-bool balance(const std::string str)
+bool balance(const std::string& str)
 {
     if (str.size() != 0 && str.size() % 2 == 0)
     {
-        for (int first = 0; first < str.size() / 2; first++)
+        std::vector<char> char_;
+        for (auto letter : str)
         {
-            int last = str.size() - first - 1;
-            switch (str[first])
+            switch (letter)
             {
             case '(':
-                if (str[last] != ')') return false;
+                char_.emplace_back('(');
                 break;
             case '[':
-                if (str[last] != ']') return false;
+                char_.emplace_back('[');
                 break;
             case '{':
-                if (str[last] != '}') return false;
+                char_.emplace_back('{');
                 break;
-            default:
-                return false;
+            case ')':
+                if (char_.empty() || char_.back() != '(')
+                    return false;
+                char_.pop_back();
+                break;
+            case ']':
+                if (char_.empty() || char_.back() != '[')
+                    return false;
+                char_.pop_back();
+                break;
+            case '}':
+                if (char_.empty() || char_.back() != '{')
+                    return false;
+                char_.pop_back();
+                break;
             }
         }
-        return true;
+        return char_.empty();
     }
     return false;
 }
