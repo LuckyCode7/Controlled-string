@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+#include "catch.hpp"
 #include "../inc/balance.hpp"
 
 SCENARIO("Bracket balance test")
