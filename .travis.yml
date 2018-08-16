@@ -26,3 +26,4 @@ script:
   - cmake ..
   - make
   - ./balance-ut-gtest
+  - ./balance-ut-catch
