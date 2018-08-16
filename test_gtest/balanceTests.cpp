@@ -1,20 +1,20 @@
 #include <gtest/gtest.h>
-#include "../src/balance.hpp"
+#include "../inc/balance.hpp"
 
 TEST(balance, correct)
 {
-    EXPECT_EQ(balance("()"), 1);
-    EXPECT_EQ(balance("({})"), 1);
-    EXPECT_EQ(balance("[({})]"), 1);
-    EXPECT_EQ(balance("([])"), 1);
-    EXPECT_EQ(balance("()[]"), 1);
-    EXPECT_EQ(balance("{}()"), 1);
+    EXPECT_TRUE(balance("()"));
+    EXPECT_TRUE(balance("({})"));
+    EXPECT_TRUE(balance("[({})]"));
+    EXPECT_TRUE(balance("([])"));
+    EXPECT_TRUE(balance("()[]"));
+    EXPECT_TRUE(balance("{}()"));
 }
 
 TEST(balance, incorrect)
 {
-    EXPECT_EQ(balance(""), 0);
-    EXPECT_EQ(balance("("), 0);
-    EXPECT_EQ(balance(")"), 0);
-    EXPECT_EQ(balance("()["), 0);
+    EXPECT_FALSE(balance(""));
+    EXPECT_FALSE(balance("("));
+    EXPECT_FALSE(balance(")"));
+    EXPECT_FALSE(balance("()["));
 }

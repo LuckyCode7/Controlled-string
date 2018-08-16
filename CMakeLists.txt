@@ -40,7 +40,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(balance)
 
 set(SRC_LIST
-    src/balance.hpp
+    inc/balance.hpp
     src/balance.cpp
 )
 
@@ -55,10 +55,10 @@ else (UNIX)
 endif (UNIX)
 
 set(TEST_SRC_LIST
-    test/test_main.cpp
-    test/balanceTests.cpp
+    test_gtest/test_main.cpp
+    test_gtest/balanceTests.cpp
 )
 
 link_libraries(gtest)
-add_executable(${PROJECT_NAME}-ut ${TEST_SRC_LIST})
-target_link_libraries(${PROJECT_NAME}-ut ${PROJECT_NAME}-lib)
+add_executable(${PROJECT_NAME}-ut-gtest ${TEST_SRC_LIST})
+target_link_libraries(${PROJECT_NAME}-ut-gtest ${PROJECT_NAME}-lib)

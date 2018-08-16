@@ -25,4 +25,4 @@ script:
   - cd build
   - cmake ..
   - make
-  - ./balance-ut
+  - ./balance-ut-gtest
