@@ -54,11 +54,19 @@ else (UNIX)
     target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}-lib)
 endif (UNIX)
 
-set(TEST_SRC_LIST
+set(TEST_SRC_LIST_GTEST
     test_gtest/test_main.cpp
     test_gtest/balanceTests.cpp
 )
 
 link_libraries(gtest)
-add_executable(${PROJECT_NAME}-ut-gtest ${TEST_SRC_LIST})
+add_executable(${PROJECT_NAME}-ut-gtest ${TEST_SRC_LIST_GTEST})
 target_link_libraries(${PROJECT_NAME}-ut-gtest ${PROJECT_NAME}-lib)
+
+set(TEST_SRC_LIST_CATCH
+    test_catch/test_main.cpp
+    test_catch/balanceTests.cpp
+)
+
+add_executable(${PROJECT_NAME}-ut-catch ${TEST_SRC_LIST_CATCH})
+target_link_libraries(${PROJECT_NAME}-ut-catch ${PROJECT_NAME}-lib)
