@@ -32,7 +32,7 @@ GIVEN("bracket ([])")
             {
                 THEN("Expect true")
                 {
-                    REQUIRE_TRUE(balance(str));
+                    REQUIRE(balance(str) == true);
                 }
             }
         }
@@ -43,7 +43,7 @@ GIVEN("bracket ()[{}]")
             {
                 THEN("Expect true")
                 {
-                    REQUIRE_TRUE(balance(str));
+                    REQUIRE(balance(str) == true);
                 }
             }
         }
